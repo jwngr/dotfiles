@@ -1,18 +1,28 @@
+# calculator
 alias bc='bc -ql'
+ 
+# force cat to display special characters
 alias c='cat -v'
-alias ca='grep ^'
 alias cat='cat -v'
+ 
+# cat-like command that adds a "filename:" prefix to each line
+alias ca='grep ^'
+ 
+# abbreviations for common commands
 alias g='grep'
 alias h='head'
 alias t='tail'
-alias hg='history | egrep !*'
-alias imcat='montage -tile 1x -geometry +2+2'
+alias ..='cd ..'
 alias l='ls -lrtahp'
 alias og='ls -ogrtAh'
-alias vg='valgrind --leak-check=full --show-reachable=yes'
 alias vi='vim'
-alias ..='cd ..'
+ 
+# debugging
+alias vg='valgrind --leak-check=full --show-reachable=yes'
+ 
+alias hg='history | egrep !*'
+alias imcat='montage -tile 1x -geometry +2+2'
+ 
+# git aliases
 alias b='git branch -a'
 alias prune='git remote prune origin'
-
-alias upgrade='sudo apt-get update; yes | sudo apt-get upgrade; yes | sudo apt-get dist-upgrade; yes | sudo apt-get autoremove'
