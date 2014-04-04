@@ -1,13 +1,15 @@
 [user]
-	name = awenger
-	email = aaron.m.wenger@gmail.com
+    name = awenger
+    email = aaron.m.wenger@gmail.com
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+    diff = auto
+    status = auto
+    branch = auto
 [core]
-	excludesfile = ~/.global-gitignore
+    excludesfile = ~/.global-gitignore
 [alias]
-	st = status
-	ci = commit
-	co = checkout
+    st = status
+    ci = commit
+    co = checkout
+[push]
+    default = matching
