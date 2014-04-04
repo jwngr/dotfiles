@@ -1,0 +1,13 @@
+[user]
+	name = awenger
+	email = aaron.m.wenger@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	excludesfile = ~/.global-gitignore
+[alias]
+	st = status
+	ci = commit
+	co = checkout
