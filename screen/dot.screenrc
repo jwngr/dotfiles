@@ -1,0 +1,15 @@
+termcapinfo xterm* ti@:te@
+defscrollback 10000
+startup_message off
+vbell off
+autodetach on # Autodetach session on hangup instead of terminating screen
+altscreen on
+hardstatus alwayslastline
+hardstatus string '%{= kw}[ %{= kb}%H%{= kw} ][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ][ %{r}%l%{w} ]%{w}[%{r} %d/%m/%y %C %A %{w}]%{w}'
+
+bindkey -k F1 prev # F11 shows previous window
+bindkey -k F2 next # F12 shows next window
+bindkey -k k7 detach # F7 detaches
+bindkey -k k9 screen # F9 creates a new window 
+bindkey -k k; title  # F10 renames the current screen
+bindkey -k k6 copy # F6 initiates scrollback
