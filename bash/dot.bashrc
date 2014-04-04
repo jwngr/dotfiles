@@ -10,8 +10,8 @@ get_git_branch() {
     git branch 2> /dev/null | awk '{ if(NF==2 && $1=="*") { print ":" $2; } }'
 }
 export GIT_EDITOR='vim'
-export PS1='\u@\h:\w\[\033[00;33m\]$(get_git_branch)\[\033[00m\]> '
-       
+export PS1='\u@\[\033[00;33m\]\h\[\033[00m\]:\w\[\033[00;36m\]$(get_git_branch)\[\033[00m\]> '
+
 # command line history
 export HISTTIMEFORMAT='%F %T'
 export HISTSIZE=10000000
