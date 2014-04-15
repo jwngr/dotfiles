@@ -28,4 +28,4 @@ alias b='git branch -a'
 alias prune='git remote prune origin'
 
 # directory navigation
-alias cl='cd /cluster/u/awenger'
+alias cl='cd /cluster/u/$USER'
