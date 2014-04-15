@@ -29,8 +29,3 @@ set completion-ignore-case on
 # path and machine type
 export MACH_TYPE=x86_64
 export PATH=$PATH:~/bin:~/bin/${MACH_TYPE}
-
-# define aliases in a separate file
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
