@@ -29,3 +29,42 @@ set completion-ignore-case on
 # path and machine type
 export MACH_TYPE=x86_64
 export PATH=$PATH:~/bin:~/bin/${MACH_TYPE}
+
+# Grab GNU-style utilities on Mac OS X
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+
+### Alias definitions
+# calculator
+alias bc='bc -ql'
+ 
+# force cat to display special characters
+alias c='cat -v'
+alias cat='cat -v'
+ 
+# cat-like command that adds a "filename:" prefix to each line
+alias ca='grep ^'
+ 
+# abbreviations for common commands
+alias g='grep'
+alias h='head'
+alias t='tail'
+alias ..='cd ..'
+alias ls='ls --color=auto'
+alias l='ls -lrtahp'
+alias og='ls -ogrtAh'
+alias vi='vim'
+ 
+# debugging
+alias vg='valgrind --leak-check=full --show-reachable=yes'
+ 
+alias hg='history | egrep !*'
+alias imcat='montage -tile 1x -geometry +2+2'
+ 
+# git aliases
+alias b='git branch -a'
+alias prune='git remote prune origin'
+
+# directory navigation
+alias cl='cd /cluster/u/$USER'
