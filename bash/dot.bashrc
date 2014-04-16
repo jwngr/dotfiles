@@ -31,9 +31,12 @@ export MACH_TYPE=x86_64
 export PATH=$PATH:~/bin:~/bin/${MACH_TYPE}
 
 # Grab GNU-style utilities on Mac OS X
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
+if [ -d "/usr/local/opt/coreutils/libexec/gnubin" ]; then
+    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+fi
+if [ -d "/usr/local/opt/coreutils/libexec/gnuman" ]; then
+    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+fi
 
 ### Alias definitions
 # calculator
