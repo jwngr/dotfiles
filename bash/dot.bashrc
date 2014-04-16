@@ -28,7 +28,7 @@ set completion-ignore-case on
 
 # path and machine type
 export MACH_TYPE=x86_64
-export PATH=$PATH:~/bin:~/bin/${MACH_TYPE}
+export PATH=/usr/local/bin:$PATH:~/bin:~/bin/${MACH_TYPE}
 
 # Grab GNU-style utilities on Mac OS X
 if [ -d "/usr/local/opt/coreutils/libexec/gnubin" ]; then
