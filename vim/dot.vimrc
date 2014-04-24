@@ -15,6 +15,7 @@ set fileformats=unix
 
 " syntax highlighting
 filetype on
+syntax on
 
 " text search with / and ?
 set ignorecase
