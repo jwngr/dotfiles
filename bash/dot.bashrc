@@ -1,5 +1,4 @@
 # basic system
-umask 027
 export EDITOR='vim'
 export LESS='--no-init --quit-if-one-screen -r'
 export PAGER='less'
