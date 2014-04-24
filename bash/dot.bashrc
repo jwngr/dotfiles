@@ -75,3 +75,7 @@ alias prune='git remote prune origin'
 
 # directory navigation
 alias cl='cd /cluster/u/$USER'
+
+# python
+alias python='python3'
+alias ipython='ipython3'
