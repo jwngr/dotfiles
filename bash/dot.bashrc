@@ -78,4 +78,4 @@ alias cl='cd /cluster/u/$USER'
 # python
 alias python='python3'
 alias ipython='ipython3'
-alias nosetests='nosetests3'
+alias nosetests='nosetests3 -v'
