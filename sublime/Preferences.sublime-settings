@@ -1,13 +1,14 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
-	"ensure_newline_at_eof_on_save": true,
-	"folder_exclude_patterns":
-	[
-		".svn",
-		".git",
-		"bin"
-	],
-	"font_size": 11,
-	"translate_tabs_to_spaces": true,
-	"trim_trailing_white_space_on_save": true
+    "color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+    "ensure_newline_at_eof_on_save": true,
+    "folder_exclude_patterns":
+    [
+        ".svn",
+        ".git",
+        "bin",
+        "__pycache__"
+    ],
+    "font_size": 11,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true
 }
