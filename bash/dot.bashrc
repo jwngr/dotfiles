@@ -25,6 +25,11 @@ set autolist
 set show-all-if-ambiguous on
 set completion-ignore-case on
 
+# auto-complete
+if [ -f "/usr/local/etc/bash_completion" ]; then
+    . "/usr/local/etc/bash_completion"
+fi
+
 # path and machine type
 export MACH_TYPE=x86_64
 export MACHTYPE=${MACH_TYPE}
@@ -40,6 +45,8 @@ fi
 if [ -d "/usr/local/opt/coreutils/libexec/gnuman" ]; then
     export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
+
+
 
 ### Alias definitions
 # calculator
