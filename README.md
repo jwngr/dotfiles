@@ -8,7 +8,7 @@ contents aim for perfect cross-platform compability (OS X / BSD and Linux / GNU)
 
 ## Mac OS X
 
-Clone this repository to ${HOME}/git/dotfiles
+Clone this repository to ${HOME}/git/dotfiles, then:
 
 ```bash
 REPOHOME="${HOME}/git/dotfiles"
@@ -25,7 +25,7 @@ ln -s "${REPOHOME}/osx/Library/KeyBindings/DefaultKeyBinding.dict" "./Library/Ke
 
 ## Ubuntu
 
-Clone this repository to ${HOME}/git/dotfiles
+Clone this repository to ${HOME}/git/dotfiles, then:
 
 ```bash
 REPOHOME="${HOME}/git/dotfiles"
