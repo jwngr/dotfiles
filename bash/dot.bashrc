@@ -87,3 +87,6 @@ alias python='python3'
 alias ipython='ipython3'
 alias nosetests='nosetests3 -v'
 alias py='ipython'
+
+# Aspera (fast downloading)
+alias ascp='~/.aspera/connect/bin/ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh'
