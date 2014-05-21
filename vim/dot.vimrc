@@ -39,7 +39,4 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " trim trailing whitespace on save
-function! TrimWhiteSpace()
-    %s/\s\+$//e
-endfunction
-autocmd BufWritePre * :call TrimWhiteSpace()
+autocmd BufWritePre * :%s/\s\+$//e
