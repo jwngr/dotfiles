@@ -7,3 +7,5 @@ Thumbs.db
 *.pyc
 *~
 __pycache__
+trackDb*tab
+hgFindSpec*tab
