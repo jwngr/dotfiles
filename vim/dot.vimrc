@@ -29,3 +29,17 @@ if has("autocmd")
     " Overwrite the /etc/vimrc line width setting for text files.
     autocmd BufRead *.txt set tw=0
 endif
+
+" highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" trim trailing whitespace on save
+function! TrimWhiteSpace()
+    %s/\s\+$//e
+endfunction
+autocmd BufWritePre * :call TrimWhiteSpace()
