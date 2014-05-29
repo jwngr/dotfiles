@@ -87,7 +87,12 @@ alias prune='git remote prune origin'
 # python
 alias python='python3'
 alias ipython='ipython3'
-alias nosetests='nosetests3 -v'
+
+if hash nosetests-3.3 2>/dev/null; then
+    alias nosetests='nosetests-3.3 -v'
+else
+    alias nosetests='nosetests3 -v'
+fi
 alias py='ipython'
 
 # Aspera (fast downloading)
