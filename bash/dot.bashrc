@@ -51,6 +51,12 @@ if [ -d "/usr/local/opt/coreutils/libexec/gnuman" ]; then
     export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 
+# mount AFS home dir, AFS group evodevo, and /cluster via SSHFS
+mount_lab() {
+    sshfs ttn:/afs/cs/u/awenger /mnt/ttn-afs/cs/u/awenger
+    sshfs ttn:/afs/cs/group/evodevo /mnt/ttn-afs/cs/group/evodevo
+    sshfs ttn:/cluster /mnt/ttn-cluster
+}
 
 
 ### Alias definitions
