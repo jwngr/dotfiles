@@ -53,9 +53,20 @@ fi
 
 # mount AFS home dir, AFS group evodevo, and /cluster via SSHFS
 mount_lab() {
-    sshfs ttn:/afs/cs/u/awenger /mnt/ttn-afs/cs/u/awenger
-    sshfs ttn:/afs/cs/group/evodevo /mnt/ttn-afs/cs/group/evodevo
-    sshfs ttn:/cluster /mnt/ttn-cluster
+    # Mac OS X
+    if [ -d "/Volumes" ]; then
+        mkdir -p /Volumes/ttn-afs-awenger
+        mkdir -p /Volumes/ttn-afs-evodevo
+        mkdir -p /Volumes/ttn-cluster
+        sshfs ttn:/afs/cs/u/awenger /Volumes/ttn-afs-awenger
+        sshfs ttn:/afs/cs/group/evodevo /Volumes/ttn-afs-evodevo
+        sshfs ttn:/cluster /Volumes/ttn-cluster
+    # Linux
+    else
+        sshfs ttn:/afs/cs/u/awenger /mnt/ttn-afs/cs/u/awenger
+        sshfs ttn:/afs/cs/group/evodevo /mnt/ttn-afs/cs/group/evodevo
+        sshfs ttn:/cluster /mnt/ttn-cluster
+    fi
 }
 
 
