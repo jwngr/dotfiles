@@ -110,7 +110,7 @@ if hash nosetests-3.3 2>/dev/null; then
 else
     alias nosetests='nosetests3 -v'
 fi
-alias py='ipython'
+alias py='ipython --pylab'
 
 # Aspera (fast downloading)
 alias ascp='~/.aspera/connect/bin/ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh'
