@@ -37,8 +37,6 @@ if [ "$PS1" ]; then
     if [ -f "/etc/bash_completion.d/git" ]; then
         . "/etc/bash_completion.d/git"
     fi
-    # recognize .bgz files as gzipped
-    complete -f -X '!*.@(Z|[gGd]z|t[ag]z|bgz)' gunzip zcat unpigz
 fi
 
 export GIT_EDITOR='vim'

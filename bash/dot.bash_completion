@@ -1,0 +1,1 @@
+complete -f -X '!*.@(Z|[gGd]z|t[ag]z|bgz)' gunzip zcat unpigz
