@@ -14,7 +14,7 @@ if [ "$PS1" ]; then
     export PS1='\u@\[\033[00;33m\]\h\[\033[00m\]:\w\[\033[00;36m\]$(get_git_branch)\[\033[00m\]> '
 
     # color .bgz files like .gz files is `ls`
-    export LS_COLORS="${LS_COLORS}*.bgz=01;31:"
+    export LS_COLORS="${LS_COLORS}*.bgz=01;31:*.gz=01;31:*.zip=01;31:*.bz2=01;31:*.Z=01;31"
 
     # command line history
     export HISTTIMEFORMAT='%F %T'
@@ -37,9 +37,8 @@ if [ "$PS1" ]; then
     if [ -f "/etc/bash_completion.d/git" ]; then
         . "/etc/bash_completion.d/git"
     fi
-    if [ -f "${HOME}/.bash_completion" ]; then
-        . "${HOME}/.bash_completion"
-    fi
+    # recognize .bgz files as gzipped
+    complete -f -X '!*.@(Z|[gGd]z|t[ag]z|bgz)' gunzip zcat unpigz
 fi
 
 export GIT_EDITOR='vim'
