@@ -13,6 +13,9 @@ if [ "$PS1" ]; then
     # command prompt (include current git branch)
     export PS1='\u@\[\033[00;33m\]\h\[\033[00m\]:\w\[\033[00;36m\]$(get_git_branch)\[\033[00m\]> '
 
+    # color .bgz files like .gz files is `ls`
+    export LS_COLORS="${LS_COLORS}*.bgz=01;31:"
+
     # command line history
     export HISTTIMEFORMAT='%F %T'
     export HISTSIZE=10000000
@@ -27,12 +30,15 @@ if [ "$PS1" ]; then
     set show-all-if-ambiguous on
     set completion-ignore-case on
 
-    # auto-complete
+    # auto-completions
     if [ -f "/usr/local/etc/bash_completion" ]; then
         . "/usr/local/etc/bash_completion"
     fi
     if [ -f "/etc/bash_completion.d/git" ]; then
         . "/etc/bash_completion.d/git"
+    fi
+    if [ -f "${HOME}/.bash_completion" ]; then
+        . "${HOME}/.bash_completion"
     fi
 fi
 
