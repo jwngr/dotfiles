@@ -40,6 +40,19 @@ if [ "$PS1" ]; then
     if [ -f "${HOME}/.bash_completion" ]; then
         . "${HOME}/.bash_completion"
     fi
+    if type -t _filedir_xspec; then
+        declare -A _xspecs
+        _install_xspec()
+        {
+            local xspec=$1 cmd
+            shift
+            for cmd in $@; do
+                _xspecs[$cmd]=$xspec
+            done
+            complete -F _filedir_xspec $@
+        }
+        _install_xspec '!*.@(Z|[gGd]z|t[ag]z|bgz)' gunzip zcat unpigz
+    fi
 fi
 
 export GIT_EDITOR='vim'
