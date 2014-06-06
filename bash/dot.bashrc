@@ -31,6 +31,9 @@ if [ "$PS1" ]; then
     if [ -f "/usr/local/etc/bash_completion" ]; then
         . "/usr/local/etc/bash_completion"
     fi
+    if [ -f "/etc/bash_completion.d/git" ]; then
+        . "/etc/bash_completion.d/git"
+    fi
 fi
 
 export GIT_EDITOR='vim'
