@@ -107,8 +107,9 @@ alias imcat='montage -tile 1x -geometry +2+2'
 alias b='git branch -a'
 alias prune='git remote prune origin'
 
-# forward X
-alias ssh='ssh -X'
+# forward X11
+alias ssh='ssh -Y'
+
 # python
 alias python='python3'
 alias ipython='ipython3'
