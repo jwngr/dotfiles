@@ -120,3 +120,6 @@ alias py='ipython --pylab'
 
 # Aspera (fast downloading)
 alias ascp='~/.aspera/connect/bin/ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh'
+
+# frequently used directories
+alias mg='cd /cluster/data/medical_genomics'
