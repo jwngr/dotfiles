@@ -121,6 +121,11 @@ else
 fi
 alias py='ipython --pylab'
 
+# use "open" to mimic "eog" on Mac
+if ! hash eog 2>/dev/null; then
+    alias eog='open'
+fi
+
 # Aspera (fast downloading)
 alias ascp='~/.aspera/connect/bin/ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh'
 
