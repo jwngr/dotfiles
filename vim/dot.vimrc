@@ -4,8 +4,8 @@ set term=xterm
 colorscheme peachpuff
 
 " indentation; expand tabs to four spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 set shiftround
 set autoindent
@@ -26,8 +26,8 @@ set incsearch
 set nu
 
 if has("autocmd")
-    " Overwrite the /etc/vimrc line width setting for text files.
-    autocmd BufRead *.txt set tw=0
+  " Overwrite the /etc/vimrc line width setting for text files.
+  autocmd BufRead *.txt set tw=0
 endif
 
 " highlight trailing whitespace

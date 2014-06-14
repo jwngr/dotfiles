@@ -15,7 +15,6 @@ REPOHOME="${HOME}/git/dotfiles"
 cd ~
 
 ln -s "${REPOHOME}/git/dot.gitconfig" ".gitconfig"
-ln -s "${REPOHOME}/git/dot.global-gitignore" ".global-gitignore"
 ln -s "${REPOHOME}/screen/dot.screenrc" ".screenrc"
 ln -s "${REPOHOME}/vim/dot.vimrc" ".vimrc"
 ln -s "${REPOHOME}/bash/dot.bashrc" ".bash_profile"
@@ -32,7 +31,6 @@ REPOHOME="${HOME}/git/dotfiles"
 cd ~
 
 ln -s "${REPOHOME}/git/dot.gitconfig" ".gitconfig"
-ln -s "${REPOHOME}/git/dot.global-gitignore" ".global-gitignore"
 ln -s "${REPOHOME}/screen/dot.screenrc" ".screenrc"
 ln -s "${REPOHOME}/vim/dot.vimrc" ".vimrc"
 ln -s "${REPOHOME}/bash/dot.bashrc" ".bash_aliases"

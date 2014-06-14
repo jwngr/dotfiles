@@ -1,15 +1,14 @@
 [user]
-    name = awenger
-    email = aaron.m.wenger@gmail.com
+  name = jacobawenger
+  email = jacob@firebase.com
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-[core]
-    excludesfile = ~/.global-gitignore
+  diff = auto
+  status = auto
+  branch = auto
 [alias]
-    st = status
-    ci = commit
-    co = checkout
+  st = status
+  ci = commit
+  co = checkout
+  b = branch
 [push]
-    default = current
+  default = current
