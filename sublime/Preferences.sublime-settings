@@ -1,20 +1,20 @@
 {
-  "bold_folder_labels": true,
-  "color_scheme": "Packages/User/Monokai (SL).tmTheme",
-  "highlight_line": true,
-  "highlight_modified_tabs": true,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "folder_exclude_patterns":
-  [
-    ".svn",
-    ".git",
-    "__pycache__"
-  ],
-  "tab_size": 2,
-  "font_size": 12,
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		"__pycache__"
+	],
+	"font_size": 12,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }
