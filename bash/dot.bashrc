@@ -38,8 +38,14 @@ function nametab() {
 
 # interactive shell?
 if [ "$PS1" ]; then
+  if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
+    . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+  fi
+
+  source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+
   # command prompt (include current git branch)
-  export PS1="[\@: \w] $ "
+  export PS1="[\@: \w] $(__git_ps1) $ "
 
   # ls colors
   export CLICOLOR=1
