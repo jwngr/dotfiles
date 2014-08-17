@@ -4,14 +4,17 @@ export LESS='--no-init --quit-if-one-screen -r'
 export PAGER='less'
 set -o noclobber
 
+#g
 function get_git_branch() {
   git branch 2> /dev/null | awk '{ if(NF==2 && $1=="*") { print ":" $2; } }'
 }
 
+# fast search
 function grepf() {
   find . -type f \
     ! -path '*.git/*' \
     -a ! -path '*/node_modules*' \
+    -a ! -path '*/bower_components*' \
     -a ! -iname '*.pdf' \
     -a ! -iname '*.gif' \
     -a ! -iname '*.jpg' \
@@ -22,9 +25,15 @@ function grepf() {
   xargs -0 -P 100 /usr/bin/grep --color=always "$@" | cut -c 1-200 | sed -e $'s/\(^[^:]*\)/\e[35m\\1\e[0m/1'
 }
 
+# start server
 function serve() {
   local port="${1:-8000}"
   /usr/bin/env python -m SimpleHTTPServer "$port"
+}
+
+# name current tab
+function nametab() {
+  echo -ne "\033]0;"$@"\007"
 }
 
 # interactive shell?
