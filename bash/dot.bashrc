@@ -38,10 +38,10 @@ function nametab() {
 
 # interactive shell?
 if [ "$PS1" ]; then
+  # Make sure __git_ps1 is defined; will print the current git branch to the command prompt
   if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
     . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
   fi
-
   source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 
   # command prompt (include current git branch)
