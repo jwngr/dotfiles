@@ -11,4 +11,8 @@
   co = checkout
   b = branch
 [push]
-  default = current
+	default = current
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f

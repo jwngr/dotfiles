@@ -1,13 +1,14 @@
 {
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
 		".svn",
 		".git",
 		"__pycache__"
 	],
-	"font_size": 12,
+	"font_size": 15,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":

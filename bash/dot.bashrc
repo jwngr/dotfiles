@@ -131,6 +131,10 @@ alias l='ls -lrtahp'
 alias og='ls -ogrtAh'
 alias vi='vim'
 
+# trash (rm replacement; https://github.com/sindresorhus/trash)
+alias t=trash
+alias rm='rm -i'
+
 # debugging
 alias vg='valgrind --leak-check=full --show-reachable=yes'
 
