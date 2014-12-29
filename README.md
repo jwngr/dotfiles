@@ -1,19 +1,25 @@
-dotfiles
-========
+# dotfiles
 
 This repository stores my standard Unix configuration files for easy
 archival and synchronization across machines.  All files are named
 with a "dot" prefix to avoid storing hidden files in git.  The file
 contents aim for perfect cross-platform compability (OS X / BSD and Linux / GNU).
 
-## Mac OS X
+## Setup Instructions
 
-Clone this repository to ${HOME}/git/dotfiles, then:
+### Mac OS X
 
 ```bash
-REPOHOME="${HOME}/git/dotfiles"
+# Clone this repo
+git clone git@github.com:jwngr/dotfiles.git ~/git/dotfiles
+
+# Move to the home directory
 cd ~
 
+# Store the path to the cloned repo
+REPOHOME="~/git/dotfiles"
+
+# Create symbolic links for each dot file
 ln -s "${REPOHOME}/git/dot.gitconfig" ".gitconfig"
 ln -s "${REPOHOME}/screen/dot.screenrc" ".screenrc"
 ln -s "${REPOHOME}/vim/dot.vimrc" ".vimrc"
@@ -22,14 +28,19 @@ ln -s "${REPOHOME}/sublime/Preferences.sublime-settings" "./Library/Application 
 ln -s "${REPOHOME}/osx/Library/KeyBindings/DefaultKeyBinding.dict" "./Library/KeyBindings/DefaultKeyBinding.dict"
 ```
 
-## Ubuntu
-
-Clone this repository to ${HOME}/git/dotfiles, then:
+### Ubuntu
 
 ```bash
-REPOHOME="${HOME}/git/dotfiles"
+# Clone this repo
+git clone git@github.com:jwngr/dotfiles.git ~/git/dotfiles
+
+# Moveto the home directory
 cd ~
 
+# Store the path to the cloned repo
+REPOHOME="~/git/dotfiles"
+
+# Create symbolic links for each dot file
 ln -s "${REPOHOME}/git/dot.gitconfig" ".gitconfig"
 ln -s "${REPOHOME}/screen/dot.screenrc" ".screenrc"
 ln -s "${REPOHOME}/vim/dot.vimrc" ".vimrc"
