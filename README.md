@@ -34,7 +34,7 @@ ln -s "${REPOHOME}/osx/Library/KeyBindings/DefaultKeyBinding.dict" "./Library/Ke
 # Clone this repo
 git clone git@github.com:jwngr/dotfiles.git ~/git/dotfiles
 
-# Moveto the home directory
+# Move to the home directory
 cd ~
 
 # Store the path to the cloned repo
