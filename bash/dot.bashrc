@@ -1,15 +1,17 @@
-# basic system
+#####################
+#  SYSTEM SETTINGS  #
+#####################
 export EDITOR='vim'
 export LESS='--no-init --quit-if-one-screen -r'
 export PAGER='less'
+export GIT_EDITOR='vim'
 set -o noclobber
 
-#g
-function get_git_branch() {
-  git branch 2> /dev/null | awk '{ if(NF==2 && $1=="*") { print ":" $2; } }'
-}
 
-# fast search
+####################
+#  HELPER METHODS  #
+####################
+# Fast search
 function grepf() {
   find . -type f \
     ! -path '*.git/*' \
@@ -25,58 +27,105 @@ function grepf() {
   xargs -0 -P 100 /usr/bin/grep --color=always "$@" | cut -c 1-200 | sed -e $'s/\(^[^:]*\)/\e[35m\\1\e[0m/1'
 }
 
-# start server
+# Local server
 function serve() {
   local port="${1:-8000}"
   /usr/bin/env python -m SimpleHTTPServer "$port"
 }
 
-# name current tab
+# Name current tab
 function nametab() {
   echo -ne "\033]0;"$@"\007"
 }
 
-# interactive shell?
-if [ "$PS1" ]; then
-  # Make sure __git_ps1 is defined; will print the current git branch to the command prompt
-  if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
-    . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
-  fi
-  source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 
-  # command prompt (include current git branch)
-  export PS1="[\@: \w] $(__git_ps1) $ "
+##################
+#  COMMAND LINE  #
+##################
+# git prompt script to get current git branch (http://code-worrier.com/blog/git-branch-in-bash-prompt/)
+source ~/.git-prompt.sh
 
-  # ls colors
-  export CLICOLOR=1
-  export LSCOLORS=ExFxCxDxBxegedabagacad
-
-  # command line history
-  export HISTTIMEFORMAT='%F %T'
-  export HISTSIZE=10000000
-  export HISTFILESIZE=10000000
-
-  # search history using the up and down arrows.
-  bind '"\e[A": history-search-backward'
-  bind '"\e[B": history-search-forward'
-
-  # tab complete
-  set autolist
-  set show-all-if-ambiguous on
-  set completion-ignore-case on
-
-  # auto-completions
-  if [ -f "/usr/local/etc/bash_completion" ]; then
-      . "/usr/local/etc/bash_completion"
-  fi
-  if [ -f "/etc/bash_completion.d/git" ]; then
-      . "/etc/bash_completion.d/git"
-  fi
+# git auto-complete (http://code-worrier.com/blog/autocomplete-git)
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
 fi
 
-export GIT_EDITOR='vim'
+# Custom command prompt
+export PS1="[\A \w]\$(__git_ps1) $ "
 
-# path and machine type
+# ls colors
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+# Command line history
+export HISTTIMEFORMAT='%F %T'
+export HISTSIZE=10000000
+export HISTFILESIZE=10000000
+
+# Search history using the up and down arrows
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+# Tab auto-complete
+set autolist
+set show-all-if-ambiguous on
+set completion-ignore-case on
+
+# Auto-completions
+if [ -f "/usr/local/etc/bash_completion" ]; then
+    . "/usr/local/etc/bash_completion"
+fi
+if [ -f "/etc/bash_completion.d/git" ]; then
+    . "/etc/bash_completion.d/git"
+fi
+
+
+#############
+#  ALIASES  #
+#############
+# calculator
+alias bc='bc -ql'
+
+# force cat to display special characters
+alias c='cat -v'
+alias cat='cat -v'
+
+# abbreviations for common commands
+alias g='grep'
+alias h='head'
+alias t='tail'
+alias ..='cd ..'
+alias l='ls -lrtahp'
+alias vi='vim'
+
+# trash (rm replacement; https://github.com/sindresorhus/trash)
+alias t=trash
+alias rm='rm -i'
+
+# forward X11
+alias ssh='ssh -Y'
+
+# python
+#alias python='python3'
+#alias ipython='ipython3'
+#alias py='ipython --pylab'
+
+
+#########################
+#  DIRECTORY SHORTCUTS  #
+#########################
+alias dev='cd ~/dev/'
+alias web='cd ~/dev/firebase-website/'
+alias admin='cd ~/dev/firebase-admin'
+alias login='cd ~/dev/firebase-backend-simple-login'
+alias hosting='cd ~/dev/firebase-hosting'
+alias hosting-admin='cd ~/dev/firebase-hosting-admin'
+
+
+###################
+#  MISCELLANEOUS  #
+###################
+# Path and machine type
 export MACH_TYPE=x86_64
 export MACHTYPE=${MACH_TYPE}
 if [ ! -d "${HOME}/bin/${MACHTYPE}" ]; then
@@ -92,7 +141,7 @@ if [ -d "/usr/local/opt/coreutils/libexec/gnuman" ]; then
   export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 fi
 
-# mount AFS home dir, AFS group evodevo, and /cluster via SSHFS
+# Mount AFS home dir, AFS group evodevo, and /cluster via SSHFS
 mount_lab() {
   # Mac OS X
   if [ -d "/Volumes" ]; then
@@ -109,64 +158,3 @@ mount_lab() {
     sshfs ttn:/cluster /mnt/ttn-cluster
   fi
 }
-
-
-### Alias definitions
-# calculator
-alias bc='bc -ql'
-
-# force cat to display special characters
-alias c='cat -v'
-alias cat='cat -v'
-
-# cat-like command that adds a "filename:" prefix to each line
-alias ca='grep ^'
-
-# abbreviations for common commands
-alias g='grep'
-alias h='head'
-alias t='tail'
-alias ..='cd ..'
-alias l='ls -lrtahp'
-alias og='ls -ogrtAh'
-alias vi='vim'
-
-# trash (rm replacement; https://github.com/sindresorhus/trash)
-alias t=trash
-alias rm='rm -i'
-
-# debugging
-alias vg='valgrind --leak-check=full --show-reachable=yes'
-
-alias hg='history | egrep !*'
-alias imcat='montage -tile 1x -geometry +2+2'
-
-# git aliases
-alias b='git branch -a'
-alias prune='git remote prune origin'
-
-# forward X11
-alias ssh='ssh -Y'
-
-# python
-#alias python='python3'
-#alias ipython='ipython3'
-
-if hash nosetests-3.3 2>/dev/null; then
-  alias nosetests='nosetests-3.3 -v'
-else
-  alias nosetests='nosetests3 -v'
-fi
-alias py='ipython --pylab'
-
-# use "open" to mimic "eog" on Mac
-if ! hash eog 2>/dev/null; then
-  alias eog='open'
-fi
-
-# Aspera (fast downloading)
-alias ascp='~/.aspera/connect/bin/ascp -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh'
-
-# frequently used directories
-alias dev='cd ~/Dev/'
-alias web='cd ~/Dev/firebase-website/'
