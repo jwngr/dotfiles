@@ -115,11 +115,22 @@ alias ssh='ssh -Y'
 #  DIRECTORY SHORTCUTS  #
 #########################
 alias dev='cd ~/dev/'
+alias desktop='cd ~/Desktop/'
+alias downloads='cd ~/Downloads/'
+
 alias web='cd ~/dev/firebase-website/'
-alias admin='cd ~/dev/firebase-admin'
-alias login='cd ~/dev/firebase-backend-simple-login'
-alias hosting='cd ~/dev/firebase-hosting'
-alias hosting-admin='cd ~/dev/firebase-hosting-admin'
+alias admin='cd ~/dev/firebase-admin/'
+alias login='cd ~/dev/firebase-backend-simple-login/'
+alias hosting='cd ~/dev/firebase-hosting/'
+alias hosting-admin='cd ~/dev/firebase-hosting-admin/'
+
+alias nd='cd ~/dev/notreda.me/'
+alias rc='cd ~/dev/rusticcitrus/'
+alias blog='cd ~/dev/blog/'
+alias seer='cd ~/dev/seer/'
+alias sdow='cd ~/dev/sdow/'
+alias sodano='cd ~/dev/sodano/'
+alias ttttt='cd ~/dev/tic-tac-tic-tac-toe/'
 
 
 ###################
