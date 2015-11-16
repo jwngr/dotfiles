@@ -73,10 +73,10 @@ set completion-ignore-case on
 
 # Auto-completions
 if [ -f "/usr/local/etc/bash_completion" ]; then
-    . "/usr/local/etc/bash_completion"
+  . "/usr/local/etc/bash_completion"
 fi
 if [ -f "/etc/bash_completion.d/git" ]; then
-    . "/etc/bash_completion.d/git"
+  . "/etc/bash_completion.d/git"
 fi
 
 
@@ -118,11 +118,14 @@ alias dev='cd ~/dev/'
 alias desktop='cd ~/Desktop/'
 alias downloads='cd ~/Downloads/'
 
-alias web='cd ~/dev/firebase-website/'
+alias website='cd ~/dev/firebase-website/'
 alias admin='cd ~/dev/firebase-admin/'
 alias login='cd ~/dev/firebase-backend-simple-login/'
 alias hosting='cd ~/dev/firebase-hosting/'
 alias hosting-admin='cd ~/dev/firebase-hosting-admin/'
+alias services='cd ~/dev/firebase-services-node/'
+alias zippo='cd ~/dev/zippo/'
+alias zippo-backend='cd ~/dev/zippo-backend/'
 
 alias nd='cd ~/dev/notreda.me/'
 alias rc='cd ~/dev/rusticcitrus/'
@@ -131,41 +134,3 @@ alias seer='cd ~/dev/seer/'
 alias sdow='cd ~/dev/sdow/'
 alias sodano='cd ~/dev/sodano/'
 alias ttttt='cd ~/dev/tic-tac-tic-tac-toe/'
-
-
-###################
-#  MISCELLANEOUS  #
-###################
-# Path and machine type
-export MACH_TYPE=x86_64
-export MACHTYPE=${MACH_TYPE}
-if [ ! -d "${HOME}/bin/${MACHTYPE}" ]; then
-  mkdir -p "${HOME}/bin/${MACHTYPE}"
-fi
-export PATH=/usr/local/bin:$PATH:~/bin:~/bin/${MACHTYPE}
-
-# Grab GNU-style utilities on Mac OS X
-if [ -d "/usr/local/opt/coreutils/libexec/gnubin" ]; then
-  export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-fi
-if [ -d "/usr/local/opt/coreutils/libexec/gnuman" ]; then
-  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-fi
-
-# Mount AFS home dir, AFS group evodevo, and /cluster via SSHFS
-mount_lab() {
-  # Mac OS X
-  if [ -d "/Volumes" ]; then
-    mkdir -p /Volumes/ttn-afs-awenger
-    mkdir -p /Volumes/ttn-afs-evodevo
-    mkdir -p /Volumes/ttn-cluster
-    sshfs ttn:/afs/cs/u/awenger /Volumes/ttn-afs-awenger
-    sshfs ttn:/afs/cs/group/evodevo /Volumes/ttn-afs-evodevo
-    sshfs ttn:/cluster /Volumes/ttn-cluster
-  # Linux
-  else
-    sshfs ttn:/afs/cs/u/awenger /mnt/ttn-afs/cs/u/awenger
-    sshfs ttn:/afs/cs/group/evodevo /mnt/ttn-afs/cs/group/evodevo
-    sshfs ttn:/cluster /mnt/ttn-cluster
-  fi
-}
