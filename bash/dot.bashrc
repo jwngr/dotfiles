@@ -15,6 +15,7 @@ set -o noclobber
 function grepf() {
   find . -type f \
     ! -path '*.git/*' \
+    -a ! -path '*/coverage*' \
     -a ! -path '*/node_modules*' \
     -a ! -path '*/bower_components*' \
     -a ! -iname '*.pdf' \
