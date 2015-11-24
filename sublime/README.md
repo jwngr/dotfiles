@@ -15,3 +15,6 @@ I have the following Sublime Text 3 packages installed:
 * [Markdown Extended](https://packagecontrol.io/packages/Markdown%20Extended) - Markdown syntax highlighting.
 * [Monokai Extended](https://packagecontrol.io/packages/Monokai%20Extended) - Custom theme.
 * [DocBlockr](https://packagecontrol.io/packages/DocBlockr) - Documentation autocompletion.
+* [Sublime Linter](https://packagecontrol.io/packages/SublimeLinter) - Code linting.
+* [Sublime​Linter-contrib-eslint](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint) - Sublime Linter plugin for ESLint.
+* [Sublime​Linter-jshint](https://packagecontrol.io/packages/SublimeLinter-jshint) - Sublime Linter plugin for JSHint.
