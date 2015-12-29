@@ -51,3 +51,14 @@ ln -s "${REPOHOME}/bash/dot.git-prompt.sh" ".git-prompt.sh"
 ln -s "${REPOHOME}/bash/dot.git-completion.bash" ".git-completion.bash"
 ln -s "${REPOHOME}/sublime/Preferences.sublime-settings" "./config/sublime-text-3/Packages/User/Preferences.sublime-settings"
 ```
+
+
+### Global node modules installed
+
+* [`bower`](https://www.npmjs.com/package/bower)
+* [`firebase-tools`](https://www.npmjs.com/package/firebase-tools)
+* [`forever`](https://www.npmjs.com/package/forever)
+* [`grunt`](https://www.npmjs.com/package/grunt)
+* [`gulp`](https://www.npmjs.com/package/gulp)
+* [`tldr`](https://www.npmjs.com/package/tldr)
+* [`updtr`](https://www.npmjs.com/package/updtr)
