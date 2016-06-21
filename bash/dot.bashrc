@@ -106,6 +106,9 @@ alias rm='rm -i'
 # forward X11
 alias ssh='ssh -Y'
 
+# Sublime Text
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
 # python
 #alias python='python3'
 #alias ipython='ipython3'
