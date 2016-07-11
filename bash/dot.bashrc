@@ -74,12 +74,12 @@ function nametab() {
 }
 
 # ls after cd (if less than 30 things in new directory)
-function cd() {
-  builtin cd $@
-  if [ `l -1 | wc -l` -lt 30 ]; then
-    l
-  fi
-}
+#function cd() {
+#  builtin cd $@
+#  if [ `l -1 | wc -l` -lt 30 ]; then
+#    l
+#  fi
+#}
 
 
 ##################
