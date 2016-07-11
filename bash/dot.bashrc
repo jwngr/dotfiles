@@ -8,6 +8,40 @@ export GIT_EDITOR='vim'
 set -o noclobber
 
 
+#############
+#  ALIASES  #
+#############
+# calculator
+alias bc='bc -ql'
+
+# force cat to display special characters
+alias c='cat -v'
+alias cat='cat -v'
+
+# abbreviations for common commands
+alias g='grep'
+alias h='head'
+alias t='tail'
+alias ..='cd ..'
+alias l='ls -lrtahp'
+alias vi='vim'
+
+# trash (rm replacement; https://github.com/sindresorhus/trash)
+alias t=trash
+alias rm='rm -i'
+
+# forward X11
+alias ssh='ssh -Y'
+
+# Sublime Text
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+# python
+#alias python='python3'
+#alias ipython='ipython3'
+#alias py='ipython --pylab'
+
+
 ####################
 #  HELPER METHODS  #
 ####################
@@ -87,40 +121,6 @@ fi
 if [ -f "/etc/bash_completion.d/git" ]; then
   . "/etc/bash_completion.d/git"
 fi
-
-
-#############
-#  ALIASES  #
-#############
-# calculator
-alias bc='bc -ql'
-
-# force cat to display special characters
-alias c='cat -v'
-alias cat='cat -v'
-
-# abbreviations for common commands
-alias g='grep'
-alias h='head'
-alias t='tail'
-alias ..='cd ..'
-alias l='ls -lrtahp'
-alias vi='vim'
-
-# trash (rm replacement; https://github.com/sindresorhus/trash)
-alias t=trash
-alias rm='rm -i'
-
-# forward X11
-alias ssh='ssh -Y'
-
-# Sublime Text
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-
-# python
-#alias python='python3'
-#alias ipython='ipython3'
-#alias py='ipython --pylab'
 
 
 #########################
