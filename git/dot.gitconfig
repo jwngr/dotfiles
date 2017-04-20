@@ -1,17 +1,44 @@
 [user]
   name = jwngr
   email = jacob@firebase.com
+
 [color]
   diff = auto
   status = auto
   branch = auto
+
 [alias]
+  # Shorten certain commands
   st = status
   co = checkout
   b = branch
+
+  # Not quite as common as an amend, but still common
+  # https://git-scm.com/docs/git-reset#git-reset-emgitresetemltmodegtltcommitgt
+  undo = reset --soft HEAD^
+
+  # Include un-added files when doing a stash
+  # https://git-scm.com/docs/git-stash
+  stash-all = stash save --include-untracked
+
+  # Improved, colorful git log output
+  # https://git-scm.com/docs/git-log
+  # via https://medium.com/@payload.dd/thanks-for-the-git-st-i-will-use-this-4da5839a21a4
+  glog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+
+[commit]
+  # "other people can trust that the changes you've made really were made by you"
+  # https://help.github.com/articles/about-gpg/
+  # https://git-scm.com/docs/git-config#git-config-commitgpgSign
+  gpgSign = true
+
 [push]
-  default = current
-[filter "media"]
-  required = true
-  clean = git media clean %f
-  smudge = git media smudge %f
+  # "push the current branch back to the branch whose changes are usually integrated into the current branch"
+  # "refuse to push if the upstream branch’s name is different from the local one"
+  # https://git-scm.com/docs/git-config#git-config-pushdefault
+  default = simple
+
+[merge]
+  # Standard diff is two sets of final changes. This introduces the original text before each side's changes.
+  # https://git-scm.com/docs/git-config#git-config-mergeconflictStyle
+  conflictstyle = diff3
