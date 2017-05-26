@@ -27,7 +27,6 @@ ln -s "${REPOHOME}/bash/dot.bashrc" ".bash_profile"
 ln -s "${REPOHOME}/bash/dot.git-prompt.sh" ".git-prompt.sh"
 ln -s "${REPOHOME}/bash/dot.git-completion.bash" ".git-completion.bash"
 ln -s "${REPOHOME}/sublime/Preferences.sublime-settings" "./Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-ln -s "${REPOHOME}/osx/Library/KeyBindings/DefaultKeyBinding.dict" "./Library/KeyBindings/DefaultKeyBinding.dict"
 ```
 
 ### Ubuntu
