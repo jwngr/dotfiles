@@ -26,10 +26,6 @@ alias ..='cd ..'
 alias l='ls -lrtahp'
 alias vi='vim'
 
-# trash (rm replacement; https://github.com/sindresorhus/trash)
-alias t=trash
-alias rm='rm -i'
-
 # forward X11
 alias ssh='ssh -Y'
 
@@ -130,15 +126,7 @@ alias dev='cd ~/dev/'
 alias desktop='cd ~/Desktop/'
 alias downloads='cd ~/Downloads/'
 
-alias website='cd ~/dev/firebase-website/'
-alias admin='cd ~/dev/firebase-admin/'
-alias login='cd ~/dev/firebase-backend-simple-login/'
-alias hosting='cd ~/dev/firebase-hosting/'
-alias hosting-admin='cd ~/dev/firebase-hosting-admin/'
-alias services='cd ~/dev/firebase-services-node/'
-alias zippo='cd ~/dev/zippo/'
-alias zippo-backend='cd ~/dev/zippo-backend/'
-
+alias website='cd ~/dev/jwn.gr/'
 alias nd='cd ~/dev/notreda.me/'
 alias rc='cd ~/dev/rusticcitrus/'
 alias blog='cd ~/dev/blog/'

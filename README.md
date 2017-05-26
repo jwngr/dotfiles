@@ -1,55 +1,29 @@
 # dotfiles
 
-This repository stores my standard Unix configuration files for easy
-archival and synchronization across machines.  All files are named
-with a "dot" prefix to avoid storing hidden files in git.  The file
-contents aim for perfect cross-platform compability (OS X / BSD and Linux / GNU).
+This repository stores my standard Unix configuration files for easy archival and synchronization
+across machines.  All files are named with a "dot" prefix to avoid storing hidden files in git. The
+file contents aim for perfect cross-platform compatibility (OS X / BSD and Linux / GNU).
 
 ## Setup Instructions
 
-### Mac OS X
-
 ```bash
 # Clone this repo
-git clone git@github.com:jwngr/dotfiles.git ~/git/dotfiles
+git clone git@github.com:jwngr/dotfiles.git
 
-# Move to the home directory
-cd ~
+# Move to the cloned repo
+cd dotfiles/
 
-# Store the path to the cloned repo
-REPOHOME="~/git/dotfiles"
-
-# Create symbolic links for each dot file
-ln -s "${REPOHOME}/git/dot.gitconfig" ".gitconfig"
-ln -s "${REPOHOME}/screen/dot.screenrc" ".screenrc"
-ln -s "${REPOHOME}/vim/dot.vimrc" ".vimrc"
-ln -s "${REPOHOME}/bash/dot.bashrc" ".bash_profile"
-ln -s "${REPOHOME}/bash/dot.git-prompt.sh" ".git-prompt.sh"
-ln -s "${REPOHOME}/bash/dot.git-completion.bash" ".git-completion.bash"
-ln -s "${REPOHOME}/sublime/Preferences.sublime-settings" "./Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+# Copy dot files
+cp git/dot.gitconfig ~/.gitconfig
+cp screen/dot.screenrc ~/.screenrc
+cp vim/dot.vimrc ~/.vimrc
+cp bash/dot.bashrc ~/.bash_profile
+cp bash/dot.git-prompt.sh ~/.git-prompt.sh
+cp bash/dot.git-completion.bash ~/.git-completion.bash
 ```
 
-### Ubuntu
-
-```bash
-# Clone this repo
-git clone git@github.com:jwngr/dotfiles.git ~/git/dotfiles
-
-# Move to the home directory
-cd ~
-
-# Store the path to the cloned repo
-REPOHOME="~/git/dotfiles"
-
-# Create symbolic links for each dot file
-ln -s "${REPOHOME}/git/dot.gitconfig" ".gitconfig"
-ln -s "${REPOHOME}/screen/dot.screenrc" ".screenrc"
-ln -s "${REPOHOME}/vim/dot.vimrc" ".vimrc"
-ln -s "${REPOHOME}/bash/dot.bashrc" ".bashrc"
-ln -s "${REPOHOME}/bash/dot.git-prompt.sh" ".git-prompt.sh"
-ln -s "${REPOHOME}/bash/dot.git-completion.bash" ".git-completion.bash"
-ln -s "${REPOHOME}/sublime/Preferences.sublime-settings" "./config/sublime-text-3/Packages/User/Preferences.sublime-settings"
-```
+Then, manually copy the Sublime Text 3 settings via `Sublime Text > Preferences > Settings` and
+install the packages listed in [sublime/README.md](./sublime/README.md).
 
 
 ### Global node modules installed
@@ -57,7 +31,6 @@ ln -s "${REPOHOME}/sublime/Preferences.sublime-settings" "./config/sublime-text-
 * [`bower`](https://www.npmjs.com/package/bower)
 * [`firebase-tools`](https://www.npmjs.com/package/firebase-tools)
 * [`forever`](https://www.npmjs.com/package/forever)
-* [`grunt`](https://www.npmjs.com/package/grunt)
 * [`gulp`](https://www.npmjs.com/package/gulp)
 * [`tldr`](https://www.npmjs.com/package/tldr)
 * [`updtr`](https://www.npmjs.com/package/updtr)

@@ -1,6 +1,6 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/SublimeLinter/Oceanic Next Italic (SL).tmTheme",
+	"color_scheme": "Packages/Oceanic Next Italic Color Scheme/Oceanic Next Italic.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
