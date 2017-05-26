@@ -37,6 +37,10 @@ alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 #alias ipython='ipython3'
 #alias py='ipython --pylab'
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 
 ####################
 #  HELPER METHODS  #
