@@ -26,3 +26,5 @@ I have the following Sublime Text 3 packages installed:
   Sublime Linter plugin for ESLint.
 * [Sublime​Linter-jshint](https://packagecontrol.io/packages/SublimeLinter-jshint) - Sublime Linter
   plugin for JSHint.
+  * [Sublime​Linter-pylint](https://packagecontrol.io/packages/SublimeLinter-pylint) - Sublime Linter
+  plugin for Pylint.
