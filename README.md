@@ -28,9 +28,8 @@ install the packages listed in [sublime/README.md](./sublime/README.md).
 
 ### Global node modules installed
 
-* [`bower`](https://www.npmjs.com/package/bower)
+* [`create-react-app`](https://www.npmjs.com/package/create-react-app)
+* [`create-react-native-app`](https://www.npmjs.com/package/create-react-native-app)
 * [`firebase-tools`](https://www.npmjs.com/package/firebase-tools)
-* [`forever`](https://www.npmjs.com/package/forever)
-* [`gulp`](https://www.npmjs.com/package/gulp)
+* [`gatsby-cli`](https://www.npmjs.com/package/gatsby-cli)
 * [`tldr`](https://www.npmjs.com/package/tldr)
-* [`updtr`](https://www.npmjs.com/package/updtr)
