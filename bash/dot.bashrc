@@ -122,6 +122,9 @@ if [ -f "/etc/bash_completion.d/git" ]; then
   . "/etc/bash_completion.d/git"
 fi
 
+# Auto-jump
+# https://olivierlacan.com/posts/cd-is-wasting-your-time/
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 #########################
 #  DIRECTORY SHORTCUTS  #
