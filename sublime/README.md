@@ -22,9 +22,10 @@ I have the following Sublime Text 3 packages installed:
 * [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements) - Enhanced side bar
   with many more options.
 * [Sublime Linter](https://packagecontrol.io/packages/SublimeLinter) - Code linting.
-* [Sublime​Linter-contrib-eslint](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint) -
+  * [Sublime​Linter-contrib-eslint](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint) -
   Sublime Linter plugin for ESLint.
-* [Sublime​Linter-jshint](https://packagecontrol.io/packages/SublimeLinter-jshint) - Sublime Linter
+  * [Sublime​Linter-jshint](https://packagecontrol.io/packages/SublimeLinter-jshint) - Sublime Linter
   plugin for JSHint.
   * [Sublime​Linter-pylint](https://packagecontrol.io/packages/SublimeLinter-pylint) - Sublime Linter
   plugin for Pylint.
+* [WakaTime](https://wakatime.com/sublime-text) - Usage tracking.
