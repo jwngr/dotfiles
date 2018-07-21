@@ -11,18 +11,11 @@ set -o noclobber
 #############
 #  ALIASES  #
 #############
-# calculator
-alias bc='bc -ql'
-
 # force cat to display special characters
 alias c='cat -v'
 alias cat='cat -v'
 
 # abbreviations for common commands
-alias g='grep'
-alias h='head'
-alias t='tail'
-alias ..='cd ..'
 alias l='ls -lrtahp'
 alias vi='vim'
 
@@ -32,14 +25,16 @@ alias ssh='ssh -Y'
 # Sublime Text
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
-# python
-#alias python='python3'
-#alias ipython='ipython3'
-#alias py='ipython --pylab'
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+# VS Code
+function code () {
+  if [[ $# = 0 ]]
+  then
+    open -a "Visual Studio Code"
+  else
+    [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+    open -a "Visual Studio Code" --args "$F"
+  fi
+}
 
 
 ####################
@@ -49,6 +44,7 @@ export NVM_DIR="$HOME/.nvm"
 function grepf() {
   find . -type f \
     ! -path '*.git/*' \
+    -a ! -path '*/env*' \
     -a ! -path '*/coverage*' \
     -a ! -path '*/node_modules*' \
     -a ! -path '*/bower_components*' \
@@ -73,14 +69,6 @@ function nametab() {
   echo -ne "\033]0;"$@"\007"
 }
 
-# ls after cd (if less than 30 things in new directory)
-#function cd() {
-#  builtin cd $@
-#  if [ `l -1 | wc -l` -lt 30 ]; then
-#    l
-#  fi
-#}
-
 
 ##################
 #  COMMAND LINE  #
@@ -94,11 +82,12 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 # Custom command prompt
-export PS1="[\A \w]\$(__git_ps1) $ "
+export PS1="[\A]\[\033[36m\] \u:\[\033[m\]\[\033[33;1m\]\w\[\033[32m\]$(__git_ps1) \[\033[m\]$ "
 
 # ls colors
 export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
+export LSCOLORS=ExFxBxDxCxegedabagacad
+alias ls='ls -GFh'
 
 # Command line history
 export HISTTIMEFORMAT='%F %T'
@@ -126,6 +115,7 @@ fi
 # https://olivierlacan.com/posts/cd-is-wasting-your-time/
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+
 #########################
 #  DIRECTORY SHORTCUTS  #
 #########################
@@ -133,11 +123,30 @@ alias dev='cd ~/dev/'
 alias desktop='cd ~/Desktop/'
 alias downloads='cd ~/Downloads/'
 
-alias website='cd ~/dev/jwn.gr/'
+alias jwngr='cd ~/dev/jwn.gr/'
 alias nd='cd ~/dev/notreda.me/'
 alias rc='cd ~/dev/rusticcitrus/'
-alias blog='cd ~/dev/blog/'
 alias seer='cd ~/dev/seer/'
 alias sdow='cd ~/dev/sdow/'
 alias sodano='cd ~/dev/sodano/'
-alias ttttt='cd ~/dev/tic-tac-tic-tac-toe/'
+alias ttt='cd ~/dev/tic-tac-tic-tac-toe/'
+
+###########
+#  TOOLS  #
+###########
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jwngr/google-cloud-sdk/path.bash.inc' ]; then source '/Users/jwngr/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jwngr/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/jwngr/google-cloud-sdk/completion.bash.inc'; fi
+
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
