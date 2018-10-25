@@ -18,7 +18,6 @@ cp git/dot.gitconfig ~/.gitconfig
 cp screen/dot.screenrc ~/.screenrc
 cp vim/dot.vimrc ~/.vimrc
 cp bash/dot.bashrc ~/.bash_profile
-cp bash/dot.git-prompt.sh ~/.git-prompt.sh
 cp bash/dot.git-completion.bash ~/.git-completion.bash
 ```
 

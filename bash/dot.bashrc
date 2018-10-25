@@ -73,8 +73,10 @@ function nametab() {
 ##################
 #  COMMAND LINE  #
 ##################
-# git prompt script to get current git branch (http://code-worrier.com/blog/git-branch-in-bash-prompt/)
-source ~/.git-prompt.sh
+# git prompt script to get current git branch (https://www.pymadethis.com/article/add-git-branch-name-to-terminal-prompt-mac/)
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
 # git auto-complete (http://code-worrier.com/blog/autocomplete-git)
 if [ -f ~/.git-completion.bash ]; then
@@ -82,7 +84,7 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 # Custom command prompt
-export PS1="[\A]\[\033[36m\] \u:\[\033[m\]\[\033[33;1m\]\w\[\033[32m\]$(__git_ps1) \[\033[m\]$ "
+export PS1="[\A]\[\033[36m\] \u:\[\033[m\]\[\033[33;1m\]\w\[\033[32m\]\$(parse_git_branch) \[\033[m\]$ "
 
 # ls colors
 export CLICOLOR=1
@@ -102,14 +104,6 @@ bind '"\e[B": history-search-forward'
 set autolist
 set show-all-if-ambiguous on
 set completion-ignore-case on
-
-# Auto-completions
-if [ -f "/usr/local/etc/bash_completion" ]; then
-  . "/usr/local/etc/bash_completion"
-fi
-if [ -f "/etc/bash_completion.d/git" ]; then
-  . "/etc/bash_completion.d/git"
-fi
 
 # Auto-jump
 # https://olivierlacan.com/posts/cd-is-wasting-your-time/
