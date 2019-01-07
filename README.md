@@ -25,10 +25,18 @@ Then, manually copy the Sublime Text 3 settings via `Sublime Text > Preferences 
 install the packages listed in [sublime/README.md](./sublime/README.md).
 
 
-### Global node modules installed
+## Global CLI Installs
+
+## npm
 
 * [`create-react-app`](https://www.npmjs.com/package/create-react-app)
 * [`create-react-native-app`](https://www.npmjs.com/package/create-react-native-app)
 * [`firebase-tools`](https://www.npmjs.com/package/firebase-tools)
 * [`gatsby-cli`](https://www.npmjs.com/package/gatsby-cli)
 * [`tldr`](https://www.npmjs.com/package/tldr)
+
+## Brew
+
+* [`jq`](https://stedolan.github.io/jq/)
+* [`litecli`](https://litecli.com/)
+* [`sqlite`](https://www.sqlite.org/index.html)
