@@ -1,7 +1,7 @@
 # dotfiles
 
 This repository stores my standard Unix configuration files for easy archival and synchronization
-across machines.  All files are named with a "dot" prefix to avoid storing hidden files in git. The
+across machines. All files are named with a "dot" prefix to avoid storing hidden files in git. The
 file contents aim for perfect cross-platform compatibility (OS X / BSD and Linux / GNU).
 
 ## Setup Instructions
@@ -19,24 +19,24 @@ cp screen/dot.screenrc ~/.screenrc
 cp vim/dot.vimrc ~/.vimrc
 cp bash/dot.bashrc ~/.bash_profile
 cp bash/dot.git-completion.bash ~/.git-completion.bash
+cp karabiner/karabiner.json ~/.config/karabiner/karabiner.json
 ```
 
 Then, manually copy the Sublime Text 3 settings via `Sublime Text > Preferences > Settings` and
 install the packages listed in [sublime/README.md](./sublime/README.md).
 
-
 ## Global CLI Installs
 
 ## npm
 
-* [`create-react-app`](https://www.npmjs.com/package/create-react-app)
-* [`create-react-native-app`](https://www.npmjs.com/package/create-react-native-app)
-* [`firebase-tools`](https://www.npmjs.com/package/firebase-tools)
-* [`gatsby-cli`](https://www.npmjs.com/package/gatsby-cli)
-* [`tldr`](https://www.npmjs.com/package/tldr)
+- [`create-react-app`](https://www.npmjs.com/package/create-react-app)
+- [`create-react-native-app`](https://www.npmjs.com/package/create-react-native-app)
+- [`firebase-tools`](https://www.npmjs.com/package/firebase-tools)
+- [`gatsby-cli`](https://www.npmjs.com/package/gatsby-cli)
+- [`tldr`](https://www.npmjs.com/package/tldr)
 
 ## Brew
 
-* [`jq`](https://stedolan.github.io/jq/)
-* [`litecli`](https://litecli.com/)
-* [`sqlite`](https://www.sqlite.org/index.html)
+- [`jq`](https://stedolan.github.io/jq/)
+- [`litecli`](https://litecli.com/)
+- [`sqlite`](https://www.sqlite.org/index.html)
