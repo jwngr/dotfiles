@@ -42,3 +42,6 @@
   # Standard diff is two sets of final changes. This introduces the original text before each side's changes.
   # https://git-scm.com/docs/git-config#git-config-mergeconflictStyle
   conflictstyle = diff3
+
+[pager]
+	branch = false
