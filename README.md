@@ -17,23 +17,18 @@ cd dotfiles/
 cp git/dot.gitconfig ~/.gitconfig
 cp screen/dot.screenrc ~/.screenrc
 cp vim/dot.vimrc ~/.vimrc
-cp bash/dot.bashrc ~/.bash_profile
-cp bash/dot.git-completion.bash ~/.git-completion.bash
-cp karabiner/karabiner.json ~/.config/karabiner/karabiner.json
+cp bash/dot.zshrc ~/.zshrc
+cp bash/dot.dot.p10k.zsh ~/.p10k.zsh
+# cp karabiner/karabiner.json ~/.config/karabiner/karabiner.json
+
+# Copy Application settings
+$ cp vscode/settings.json '~/Library/Application Support/Code/User/settings.json'
 ```
 
-Then, manually copy the Sublime Text 3 settings via `Sublime Text > Preferences > Settings` and
-install the packages listed in [sublime/README.md](./sublime/README.md).
+### Application Settings
 
-## Global CLI Installs
-
-## npm
-
-- [`create-react-app`](https://www.npmjs.com/package/create-react-app)
-- [`create-react-native-app`](https://www.npmjs.com/package/create-react-native-app)
-- [`firebase-tools`](https://www.npmjs.com/package/firebase-tools)
-- [`gatsby-cli`](https://www.npmjs.com/package/gatsby-cli)
-- [`tldr`](https://www.npmjs.com/package/tldr)
+- [VS Code](vscode/README.md)
+- [iTerm2](iterm2/README.md)
 
 ## Brew
 
