@@ -119,6 +119,7 @@ alias cat='cat -v'
 alias ls='ls -lrtahp'
 
 # Personal project directory shortcuts
+alias dot='cd ~/dev/dotfiles/'
 alias jwngr='cd ~/dev/jwn.gr/'
 alias nd='cd ~/dev/notreda.me/'
 alias rc='cd ~/dev/rusticcitrus/'
