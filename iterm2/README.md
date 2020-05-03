@@ -1,4 +1,4 @@
 # iTerm2
 
-1. Follow the instructions [here](https://stackoverflow.com/a/23356086) using
+1. [Import custom profile](https://stackoverflow.com/a/23356086) saved in
    [`settings.iterm2.json`](./settings.iterm2.json).

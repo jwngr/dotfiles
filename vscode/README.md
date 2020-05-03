@@ -2,12 +2,6 @@
 
 1. Install [Visual Studio Code](https://code.visualstudio.com/).
 
-1. Copy user settings:
-
-   ```zsh
-   $ cp settings.vscode.json ~/Library/Application\ Support/Code/User/settings.json
-   ```
-
 1. Enable [launching from the command line](https://code.visualstudio.com/docs/editor/command-line#_launching-from-command-line).
 
 1. Install extensions:

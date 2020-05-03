@@ -6,32 +6,41 @@ file contents aim for perfect cross-platform compatibility (OS X / BSD and Linux
 
 ## Setup Instructions
 
-```bash
-# Clone this repo
-git clone git@github.com:jwngr/dotfiles.git
+1. Clone this repo:
 
-# Move to the cloned repo
-cd dotfiles/
+   ```zsh
+   $ git clone git@github.com:jwngr/dotfiles.git
+   $ cd dotfiles
+   ```
 
-# Copy dot files
-cp git/dot.gitconfig ~/.gitconfig
-cp screen/dot.screenrc ~/.screenrc
-cp vim/dot.vimrc ~/.vimrc
-cp bash/dot.zshrc ~/.zshrc
-cp bash/dot.dot.p10k.zsh ~/.p10k.zsh
-# cp karabiner/karabiner.json ~/.config/karabiner/karabiner.json
+1. Copy dot files:
 
-# Copy Application settings
-$ cp vscode/settings.json '~/Library/Application Support/Code/User/settings.json'
-```
+   ```zsh
+   $ cp git/dot.gitconfig ~/.gitconfig
+   $ cp screen/dot.screenrc ~/.screenrc
+   $ cp vim/dot.vimrc ~/.vimrc
+   $ cp zsh/dot.zshrc ~/.zshrc
+   $ cp zsh/dot.p10k.zsh ~/.p10k.zsh
+   $ cp karabiner/karabiner.json ~/.config/karabiner/karabiner.json
+   ```
 
-### Application Settings
+1. Copy application settings:
 
-- [VS Code](vscode/README.md)
-- [iTerm2](iterm2/README.md)
+   ```zsh
+   $ cp vscode/settings.json '~/Library/Application Support/Code/User/settings.json'
+   ```
 
-## Brew
+1. Install [`brew`](https://brew.sh/).
 
-- [`jq`](https://stedolan.github.io/jq/)
-- [`litecli`](https://litecli.com/)
-- [`sqlite`](https://www.sqlite.org/index.html)
+1. Install the following packages via `brew`:
+
+   ```zsh
+   $ brew install jq  # https://stedolan.github.io/jq/
+   $ brew install litecli  # https://litecli.com/
+   $ brew install sqlite  # https://www.sqlite.org/index.html
+   ```
+
+1. Do some manual setup for the following applications:
+   - [iTerm2](iterm2/README.md)
+   - [Visual Studio Code](vscode/README.md)
+   - [zsh](iterm2/README.md)
