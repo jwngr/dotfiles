@@ -128,7 +128,7 @@ alias sdow='cd ~/dev/sdow/'
 alias sodano='cd ~/dev/sodano/'
 alias ttt='cd ~/dev/tic-tac-tic-tac-toe/'
 
-# Work directory shortcuts
+# Subspace shortcuts
 alias web='cd ~/dev/subspace/web'
 alias website='cd ~/dev/marketing-website'
 
@@ -136,3 +136,12 @@ alias website='cd ~/dev/marketing-website'
 alias dev='cd ~/dev/'
 alias desktop='cd ~/Desktop/'
 alias downloads='cd ~/Downloads/'
+
+# Other Subspace aliases
+alias prodaccess='gcloud auth login && firebase login --reauth'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jwngr/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jwngr/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jwngr/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jwngr/google-cloud-sdk/completion.zsh.inc'; fi
