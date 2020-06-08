@@ -4,6 +4,12 @@
 
 1. Enable [launching from the command line](https://code.visualstudio.com/docs/editor/command-line#_launching-from-command-line).
 
+1. Copy per-language snippets:
+
+   ```zsh
+   $ cp vscode/snippets/*.json '/Users/jwngr/Library/Application Support/Code/User/snippets/'
+   ```
+
 1. Install extensions:
 
    - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer) - Colorizes matching brackets.
