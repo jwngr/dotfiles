@@ -27,7 +27,8 @@ file contents aim for perfect cross-platform compatibility (OS X / BSD and Linux
 1. Copy application settings:
 
    ```zsh
-   $ cp vscode/settings.json '~/Library/Application Support/Code/User/settings.json'
+   $ cp vscode/settings.vscode.json ~/Library/Application\ Support/Code/User/settings.json
+   $ cp vscode/global.code-snippets ~/Library/Application\ Support/Code/User/snippets/
    ```
 
 1. Install [`brew`](https://brew.sh/).
