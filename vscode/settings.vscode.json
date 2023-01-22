@@ -60,6 +60,17 @@
   "workbench.startupEditor": "newUntitledFile",
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": true,
-  "window.zoomLevel": 0,
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.editor.untitled.hint": "hidden",
+  "editor.bracketPairColorization.enabled": true,
+  "vscode-edge-devtools.mirrorEdits": true,
+  "editor.inlineSuggest.enabled": true,
+  "diffEditor.renderSideBySide": false
 }
