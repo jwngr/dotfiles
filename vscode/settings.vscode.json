@@ -2,7 +2,7 @@
   "cSpell.userWords": ["firestore"],
 
   "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
@@ -11,6 +11,11 @@
   "editor.rulers": [100],
   "editor.fontLigatures": true,
   "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.bracketPairColorization.enabled": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
   "eslint.alwaysShowStatus": true,
 
@@ -43,23 +48,19 @@
 
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
+  "codeviz.analyticsEnabled": false,
+  "gitlens.telemetry.enabled": false,
 
   "terminal.integrated.fontFamily": "MesloLGS NF",
 
   "workbench.startupEditor": "newUntitledFile",
-  "editor.minimap.enabled": false,
   "breadcrumbs.enabled": true,
   "vsicons.dontShowNewVersionMessage": true,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.editor.untitled.hint": "hidden",
-  "editor.bracketPairColorization.enabled": true,
-  "vscode-edge-devtools.mirrorEdits": true,
   "editor.inlineSuggest.enabled": true,
   "diffEditor.renderSideBySide": false
 }
