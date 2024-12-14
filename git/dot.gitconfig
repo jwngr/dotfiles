@@ -9,9 +9,9 @@
 
 [alias]
   # Shorten certain commands
-  st = status
-  co = checkout
   b = branch
+  co = checkout
+  del = branch -D
 
   # Not quite as common as an amend, but still common
   # https://git-scm.com/docs/git-reset#git-reset-emgitresetemltmodegtltcommitgt
@@ -38,10 +38,17 @@
   # https://git-scm.com/docs/git-config#git-config-pushdefault
   default = simple
 
-[merge]
-  # Standard diff is two sets of final changes. This introduces the original text before each side's changes.
-  # https://git-scm.com/docs/git-config#git-config-mergeconflictStyle
-  conflictstyle = diff3
+[core]
+  # Use delta for better git diffs.
+  # https://dandavison.github.io/delta/introduction.html
+	pager = delta
 
-[pager]
-	branch = false
+[delta]
+  # Delta git diff configuration.
+	line-numbers = true
+	navigate = true
+	side-by-side = true
+
+[diff]
+  # Show moved lines in diffs.
+  colorMoved = default

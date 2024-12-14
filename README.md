@@ -21,7 +21,6 @@ file contents aim for perfect cross-platform compatibility (OS X / BSD and Linux
    $ cp vim/dot.vimrc ~/.vimrc
    $ cp zsh/dot.zshrc ~/.zshrc
    $ cp zsh/dot.p10k.zsh ~/.p10k.zsh
-   $ cp karabiner/karabiner.json ~/.config/karabiner/karabiner.json
    ```
 
 1. Copy application settings:
@@ -39,9 +38,10 @@ file contents aim for perfect cross-platform compatibility (OS X / BSD and Linux
    $ brew install jq  # https://stedolan.github.io/jq/
    $ brew install litecli  # https://litecli.com/
    $ brew install sqlite  # https://www.sqlite.org/index.html
+   $ brew install git-delta  # https://dandavison.github.io/delta/installation.html
    ```
 
 1. Do some manual setup for the following applications:
    - [iTerm2](iterm2/README.md)
-   - [Visual Studio Code](vscode/README.md)
+   - [Cursor / Visual Studio Code](vscode/README.md)
    - [zsh](iterm2/README.md)

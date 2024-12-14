@@ -113,17 +113,16 @@ set completion-ignore-case on
 #########################
 #  DIRECTORY SHORTCUTS  #
 #########################
+# Personal project directory shortcuts
+alias jwngr='cd ~/dev/personal-site/'
+alias nd='cd ~/dev/notreda.me/'
+alias sdow='cd ~/dev/sdow/'
+alias conductor='cd ~/dev/conductor/'
+
+# Other directory shortcuts
 alias dev='cd ~/dev/'
 alias desktop='cd ~/Desktop/'
 alias downloads='cd ~/Downloads/'
-
-alias jwngr='cd ~/dev/jwn.gr/'
-alias nd='cd ~/dev/notreda.me/'
-alias rc='cd ~/dev/rusticcitrus/'
-alias seer='cd ~/dev/seer/'
-alias sdow='cd ~/dev/sdow/'
-alias sodano='cd ~/dev/sodano/'
-alias ttt='cd ~/dev/tic-tac-tic-tac-toe/'
 
 ###########
 #  TOOLS  #

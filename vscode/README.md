@@ -6,10 +6,14 @@
 
 1. Install extensions:
 
+   - [Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode) - Language support for Astro
+   - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) - Show lint warnings and other errors inline
    - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - Integrates ESLint into VS Code
    - [GitLens](https://gitlens.amod.io/) - Supercharges VS Code's git integration
    - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI pair programmer
-   - [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) - Provides more GitHub PR and issue info
+   - [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css) - CSS Intellisense for HTML
+   - [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost) - Display import package size in the editor
+   - [MDX](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) - Language support for MDX
    - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense) - Autocompletes filenames
    - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Automatic code formatting
    - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - Python Intellisense

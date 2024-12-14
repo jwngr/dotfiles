@@ -116,26 +116,15 @@ alias cat='cat -v'
 alias ls='ls -lrtahp'
 
 # Personal project directory shortcuts
-alias dot='cd ~/dev/dotfiles/'
-alias jwngr='cd ~/dev/jwn.gr/'
+alias jwngr='cd ~/dev/personal-site/'
 alias nd='cd ~/dev/notreda.me/'
-alias rc='cd ~/dev/rusticcitrus/'
-alias seer='cd ~/dev/seer/'
 alias sdow='cd ~/dev/sdow/'
-alias sodano='cd ~/dev/sodano/'
-alias ttt='cd ~/dev/tic-tac-tic-tac-toe/'
-
-# Subspace shortcuts
-alias web='cd ~/dev/subspace/web'
-alias website='cd ~/dev/marketing-website'
+alias conductor='cd ~/dev/conductor/'
 
 # Other directory shortcuts
 alias dev='cd ~/dev/'
 alias desktop='cd ~/Desktop/'
 alias downloads='cd ~/Downloads/'
-
-# Other Subspace aliases
-alias prodaccess='gcloud auth login && firebase login --reauth'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jwngr/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jwngr/google-cloud-sdk/path.zsh.inc'; fi

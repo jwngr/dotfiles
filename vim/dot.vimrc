@@ -1,8 +1,5 @@
 set term=xterm
 
-" light color scheme
-colorscheme peachpuff
-
 " indentation; expand tabs to two spaces
 set shiftwidth=2
 set tabstop=2

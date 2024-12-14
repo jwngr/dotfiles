@@ -1,8 +1,6 @@
 {
-  // Dictionary
   "cSpell.userWords": ["firestore"],
 
-  // Editor
   "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 15,
   "editor.insertSpaces": true,
@@ -12,11 +10,10 @@
   "editor.formatOnSave": true,
   "editor.rulers": [100],
   "editor.fontLigatures": true,
+  "editor.linkedEditing": true,
 
-  // ESLint
   "eslint.alwaysShowStatus": true,
 
-  // Files
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -28,17 +25,13 @@
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
 
-  // Icons
   "workbench.iconTheme": "vscode-icons",
 
-  // JavaScript / TypeScript
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
 
-  // Prettier
   "prettier.requireConfig": false,
 
-  // Python
   "python.formatting.autopep8Args": [
     "--indent-size",
     "2",
@@ -46,17 +39,13 @@
     "100"
   ],
 
-  // SQL
   "sql.editor.formatOnSave": false,
 
-  // Telemetry
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
 
-  // Terminal
   "terminal.integrated.fontFamily": "MesloLGS NF",
 
-  // VS Code UI
   "workbench.startupEditor": "newUntitledFile",
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": true,
