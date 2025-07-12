@@ -1,7 +1,7 @@
 {
   "cSpell.userWords": ["firestore"],
 
-  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "Fira Mono, JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 14,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
@@ -62,5 +62,17 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.editor.untitled.hint": "hidden",
   "editor.inlineSuggest.enabled": true,
-  "diffEditor.renderSideBySide": false
+  "diffEditor.renderSideBySide": false,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "notebook.insertFinalNewline": true,
+  "cursor.cpp.enablePartialAccepts": true,
+  "workbench.colorTheme": "Monokai",
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "update.releaseTrack": "prerelease"
 }
